@@ -8,6 +8,7 @@ public class GreedyAlgorithmTester {
     }
     public static void coinsTest(){
         System.out.println("---------------------coinsTest()---------------------");
+        System.out.println((new Coins(0)).greedyAlgorithm() == null);
         System.out.println((new Coins(1)).greedyAlgorithm().equals(Collections.singletonList(1)));
         System.out.println((new Coins(2)).greedyAlgorithm().equals(Collections.singletonList(2)));
         System.out.println((new Coins(5)).greedyAlgorithm().equals(Collections.singletonList(5)));
@@ -16,7 +17,6 @@ public class GreedyAlgorithmTester {
         System.out.println((new Coins(19)).greedyAlgorithm().equals(Arrays.asList(10,5,2,2)));
         System.out.println((new Coins(30)).greedyAlgorithm().equals(Arrays.asList(10,10,10)));
         System.out.println((new Coins(36)).greedyAlgorithm().equals(Arrays.asList(10,10,10,5,1)));
-        System.out.println((new Coins(0)).greedyAlgorithm() == null);
         System.out.println((new Coins(156)).greedyAlgorithm()
                 .equals(Arrays.asList(10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 5, 1)));
         System.out.println((new Coins(100)).greedyAlgorithm()
