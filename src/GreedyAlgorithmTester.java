@@ -40,11 +40,11 @@ public class GreedyAlgorithmTester {
         FractionalKnapSack fractionalKnapSack = new FractionalKnapSack(20, Arrays.asList(s33,s11,s22));
         System.out.println(fractionalKnapSack.greedyAlgorithm().toString().equals("[{weight=10.0, value=60.0}, {weight=10.0, value=50.0}]"));
 
-        FractionalKnapSack.Item s111 = new FractionalKnapSack.Item(10,50);
-        FractionalKnapSack.Item s222 = new FractionalKnapSack.Item(20,100);
+        FractionalKnapSack.Item s111 = new FractionalKnapSack.Item(10,150);
+        FractionalKnapSack.Item s222 = new FractionalKnapSack.Item(10,100);
         FractionalKnapSack.Item s333 = new FractionalKnapSack.Item(30,120);
         FractionalKnapSack fractionalKnapSack1 = new FractionalKnapSack(20, Arrays.asList(s222,s333,s111));
-        System.out.println(fractionalKnapSack1.greedyAlgorithm().toString().equals("[{weight=20.0, value=100.0}]"));
+        System.out.println(fractionalKnapSack1.greedyAlgorithm().toString().equals("[{weight=10.0, value=150.0}, {weight=10.0, value=100.0}]"));
     }
     public static void mstTest(){
         System.out.println("---------------------mstTest()---------------------");
