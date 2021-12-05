@@ -16,7 +16,7 @@ public class GreedyAlgorithmTester {
         System.out.println((new Coins(19)).greedyAlgorithm().equals(Arrays.asList(10,5,2,2)));
         System.out.println((new Coins(30)).greedyAlgorithm().equals(Arrays.asList(10,10,10)));
         System.out.println((new Coins(36)).greedyAlgorithm().equals(Arrays.asList(10,10,10,5,1)));
-        System.out.println((new Coins(0)).greedyAlgorithm().equals(Collections.emptyList()));
+        System.out.println((new Coins(0)).greedyAlgorithm() == null);
         System.out.println((new Coins(156)).greedyAlgorithm()
                 .equals(Arrays.asList(10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 5, 1)));
         System.out.println((new Coins(100)).greedyAlgorithm()
@@ -32,13 +32,13 @@ public class GreedyAlgorithmTester {
         FractionalKnapSack.Item s2 = new FractionalKnapSack.Item(20,100);
         FractionalKnapSack.Item s3 = new FractionalKnapSack.Item(30,120);
         FractionalKnapSack s = new FractionalKnapSack(50, Arrays.asList(s3,s1,s2));
-        System.out.println(s.greedyAlgorithm().toString().equals("[{weight=10.0, value=60.0}, {weight=20.0, value=100.0}, {weight=20.0, value=120.0}]"));
+        System.out.println(s.greedyAlgorithm().toString().equals("[{weight=10.0, value=60.0}, {weight=20.0, value=100.0}, {weight=20.0, value=80.0}]"));
 
         FractionalKnapSack.Item s11 = new FractionalKnapSack.Item(10,60);
         FractionalKnapSack.Item s22 = new FractionalKnapSack.Item(20,100);
         FractionalKnapSack.Item s33 = new FractionalKnapSack.Item(30,120);
         FractionalKnapSack fractionalKnapSack = new FractionalKnapSack(20, Arrays.asList(s33,s11,s22));
-        System.out.println(fractionalKnapSack.greedyAlgorithm().toString().equals("[{weight=10.0, value=60.0}, {weight=10.0, value=100.0}]"));
+        System.out.println(fractionalKnapSack.greedyAlgorithm().toString().equals("[{weight=10.0, value=60.0}, {weight=10.0, value=50.0}]"));
 
         FractionalKnapSack.Item s111 = new FractionalKnapSack.Item(10,50);
         FractionalKnapSack.Item s222 = new FractionalKnapSack.Item(20,100);
